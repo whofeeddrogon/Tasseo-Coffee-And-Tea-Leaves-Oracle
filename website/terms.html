@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasseo | Terms of Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .last-updated {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars-container" id="stars"></div>
+
+    <nav>
+        <a href="index.html" class="logo">Tasseo</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="glass-card content-card">
+            <h1 style="font-size: 2.5rem; text-align: center; color: var(--celestial-gold); margin-bottom: 1rem;">Terms of Service</h1>
+            <p class="last-updated">Last Updated: February 15, 2026</p>
+
+            <section>
+                <h2>1. Acceptance of Terms</h2>
+                <p>By downloading or using the Tasseo application, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application.</p>
+            </section>
+
+            <section>
+                <h2>2. Mystical Services</h2>
+                <p>Tasseo provides entertainment services based on artificial intelligence interpretations of coffee grounds, tea leaves, and astrological data. You acknowledge that:</p>
+                <ul>
+                    <li>The readings provided are for <strong>entertainment purposes only</strong>.</li>
+                    <li>The AI interpretations are not professional advice (legal, medical, financial, or otherwise).</li>
+                    <li>Individual experiences and spiritual connections may vary.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Cosmic Credits & Subscriptions</h2>
+                <p>Terms regarding our in-app economy:</p>
+                <ul>
+                    <li><strong>Credits:</strong> Used to perform rituals. Credits are non-refundable and have no real-world cash value.</li>
+                    <li><strong>Subscriptions:</strong> Premium plans grant you daily credits and exclusive features. Subscriptions are billed through your App Store or Play Store account.</li>
+                    <li><strong>Cancellations:</strong> You can manage and cancel subscriptions through your system settings at any time.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. User Content</h2>
+                <p>When you upload photos for analysis, you retain ownership of your images. You grant Tasseo a temporary, technical license to process these images via our AI seers to provide your reading.</p>
+                <p>You agree not to upload any content that is illegal, offensive, or violates the privacy of others.</p>
+            </section>
+
+            <section>
+                <h2>5. Limitation of Liability</h2>
+                <p>Tasseo shall not be liable for any decisions made based on the mystical insights provided by the application. You use the application and its interpretations at your own risk.</p>
+            </section>
+
+            <section>
+                <h2>6. Changes to Terms</h2>
+                <p>We reserve the right to update these terms to reflect changes in our mystical services or legal requirements. Continued use of the app after updates constitutes acceptance of the new terms.</p>
+            </section>
+
+            <section>
+                <h2>7. Contact Us</h2>
+                <p>For inquiries regarding these terms, contact us at: <a href="mailto:legal@tasseo.app" style="color: var(--celestial-gold);">legal@tasseo.app</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support / Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Tasseo App. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const container = document.getElementById('stars');
+        const starCount = 150;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const size = Math.random() * 2 + 1;
+            const duration = Math.random() * 3 + 2;
+            const delay = Math.random() * 5;
+            star.style.left = `${x}%`;
+            star.style.top = `${y}%`;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.setProperty('--duration', `${duration}s`);
+            star.style.animationDelay = `${delay}s`;
+            container.appendChild(star);
+        }
+    </script>
+</body>
+</html>

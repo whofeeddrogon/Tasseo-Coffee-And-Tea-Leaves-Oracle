@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasseo | Ancient Wisdom Meets Infinite Memory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            padding: 4rem 0;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Abstract mystical phone representation if no image is available */
+        .mockup-container {
+            width: 300px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 40px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .mockup-glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212,175,55,0.4) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse-glow 4s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            to { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--celestial-gold), #FFF8DC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image {
+                width: 100%;
+            }
+            .mockup-container {
+                height: 500px;
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars-container" id="stars"></div>
+
+    <nav>
+        <a href="index.html" class="logo">Tasseo</a>
+        <div class="nav-links">
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Unlock the <span>Secrets</span> in Your Cup</h1>
+                <p>Tasseo combines ancient divination traditions with an advanced, personalized AI Oracle. Your spiritual journey is remembered, analyzed, and revealed like never before.</p>
+                
+                <div class="store-badges">
+                    <!-- Generic placeholder badges for App Store and Google Play -->
+                    <a href="#" class="store-badge-link">
+                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png" alt="Download on the App Store" class="store-badge">
+                    </a>
+                    <a href="#" class="store-badge-link">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge" style="height: 70px; margin-top: -10px;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="mockup-container">
+                    <div class="mockup-glow"></div>
+                    <div style="font-size: 4rem; z-index: 2;">✨</div>
+                    <div style="color: var(--celestial-gold); margin-top: 1rem; z-index: 2; font-weight: bold; letter-spacing: 2px;">TASSEO</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" style="padding-bottom: 6rem;">
+            <h2 style="text-align: center;">A Prophecy Tailored for You</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">Beyond simple fortune telling. Every mark matters, whether it's espresso crema, tea leaves, or matcha residue.</p>
+
+            <div class="features-grid">
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Living Grimoire</h3>
+                    <p>The Oracle remembers your past readings, building a deep, spiritual profile to offer connected and evolving guidance.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">☕</div>
+                    <h3>Universal Readings</h3>
+                    <p>Turkish Coffee, Espresso, Tea Leaves, or Modern Lattes. Any residue left in your cup holds a message for the future.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Cosmic Synergy</h3>
+                    <p>Readings are aligned dynamically with your Sun, Moon, and Rising signs, taking into account current astrological transits.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">Tasseo</div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support / Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Tasseo App. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const container = document.getElementById('stars');
+        const starCount = 150;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const size = Math.random() * 2 + 1;
+            const duration = Math.random() * 3 + 2;
+            const delay = Math.random() * 5;
+            star.style.left = `${x}%`;
+            star.style.top = `${y}%`;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.setProperty('--duration', `${duration}s`);
+            star.style.animationDelay = `${delay}s`;
+            container.appendChild(star);
+        }
+    </script>
+</body>
+</html>
